@@ -37,13 +37,18 @@ of how you can do that.
 
 ### Configure a user-defined log level for a single `Logger`
 
-    curl -X POST http://localhost:8081/tasks/log-level?logger=org.stuartgunter.dropwizard&level=INFO
+```shell
+curl -X POST -d "logger=org.stuartgunter.dropwizard&level=INFO" http://localhost:8081/tasks/log-level
+```
 
 ### Configure a user-defined log level for multiple `Logger`s
 
-    curl -X POST http://localhost:8081/tasks/log-level?logger=org.stuartgunter.dropwizard&logger=io.dropwizard.core&level=INFO
+```shell
+curl -X POST -d "logger=org.stuartgunter.dropwizard&logger=io.dropwizard.core&level=INFO" http://localhost:8081/tasks/log-level
+```
 
 ### Configure the default log level for a single `Logger`
 
-    curl -X POST http://localhost:8081/tasks/log-level?logger=org.stuartgunter.dropwizard
-
+```shell
+curl -X POST -d "logger=org.stuartgunter.dropwizard" http://localhost:8081/tasks/log-level
+```
