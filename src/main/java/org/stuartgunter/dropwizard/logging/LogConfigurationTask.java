@@ -61,6 +61,7 @@ public class LogConfigurationTask extends Task {
             Logger logger = loggerContext.getLogger(loggerName);
             logger.setLevel(loggerLevel);
             output.println(String.format("Configured logging level for %s to %s", loggerName, loggerLevel));
+            output.flush();
         }
     }
 
