@@ -12,7 +12,7 @@ import java.io.StringWriter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ConfigureLoggingLevelTaskTest {
+public class LogConfigurationTaskTest {
 
     private static final Level DEFAULT_LEVEL = Level.ALL;
 
@@ -23,7 +23,7 @@ public class ConfigureLoggingLevelTaskTest {
     private final StringWriter stringWriter = new StringWriter();
     private final PrintWriter output = new PrintWriter(stringWriter);
 
-    private final ConfigureLoggingLevelTask task = new ConfigureLoggingLevelTask(loggerContext);
+    private final LogConfigurationTask task = new LogConfigurationTask(loggerContext);
 
     @Before
     public void setUp() throws Exception {
@@ -81,6 +81,6 @@ public class ConfigureLoggingLevelTaskTest {
 
         assertThat(stringWriter.toString()).isEqualTo(
                 "Configured logging level for logger.one to INFO\n" +
-                "Configured logging level for logger.two to INFO\n");
+                        "Configured logging level for logger.two to INFO\n");
     }
 }

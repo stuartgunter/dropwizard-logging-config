@@ -13,25 +13,25 @@ import java.util.List;
 /**
  * Sets the logging {@link Level} for a number of {@link Logger}s
  */
-public class ConfigureLoggingLevelTask extends Task {
+public class LogConfigurationTask extends Task {
 
     private final LoggerContext loggerContext;
 
     /**
-     * Creates a new ConfigureLoggingLevelTask.
+     * Creates a new LogConfigurationTask.
      */
-    public ConfigureLoggingLevelTask() {
+    public LogConfigurationTask() {
         this((LoggerContext) LoggerFactory.getILoggerFactory());
     }
 
     /**
-     * Creates a new ConfigureLoggingLevelTask with the given {@link LoggerContext} instance.
+     * Creates a new LogConfigurationTask with the given {@link LoggerContext} instance.
      * <p/>
-     * <b>Use {@link ConfigureLoggingLevelTask#ConfigureLoggingLevelTask()} instead.</b>
+     * <b>Use {@link LogConfigurationTask#LogConfigurationTask()} instead.</b>
      *
      * @param loggerContext a {@link LoggerContext} instance
      */
-    public ConfigureLoggingLevelTask(LoggerContext loggerContext) {
+    public LogConfigurationTask(LoggerContext loggerContext) {
         super("log-level");
         this.loggerContext = loggerContext;
     }
