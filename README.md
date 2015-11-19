@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/stuartgunter/dropwizard-logging-config.png?branch=master)](https://travis-ci.org/stuartgunter/dropwizard-logging-config)
 
-**Note: This task is now included in the Dropwizard core and is enabled by default for the admin environment.**
+**Note: This task is included in the Dropwizard core since v0.8.0 and is enabled by default for the admin environment.**
 
 The `dropwizard-logging-config` library allows you to configure Logback within a Dropwizard app at runtime. It provides
 a Dropwizard `Task` that can be made accessible via the admin interface to allow for runtime changes to the logging
